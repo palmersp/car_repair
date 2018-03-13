@@ -68,13 +68,6 @@ Style/ExpandPathArguments:
     - 'bin/update'
     - 'test/test_helper.rb'
 
-# Offense count: 38
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: true
-
 # Offense count: 2
 Style/MixinUsage:
   Exclude:
