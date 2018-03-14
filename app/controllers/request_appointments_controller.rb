@@ -2,7 +2,8 @@
 
 class RequestAppointmentsController < ApplicationController
   def create
-    RequestAppointment.create!(email: params.dig(:request_appointment, :email))
+    request = RequestAppointment.create!(email: params.dig(:request_appointment, :email))
+    ActivationLinkMailer.send_activation_link(request)
     redirect_to activation_path
   end
 end
