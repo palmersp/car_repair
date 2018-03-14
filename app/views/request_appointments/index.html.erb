@@ -1,0 +1,4 @@
+<%= form_with scope: :request_appointment, url: request_appointments_path, local: true do |f| %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
+<% end %>
