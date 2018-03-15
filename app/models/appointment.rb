@@ -13,4 +13,5 @@ class Appointment < ActiveRecord::Base
   validates :appointment_date, presence: true
   validates :email, presence: true
   validates :code, presence: true
+  validates :code, uniqueness: true
 end
