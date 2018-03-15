@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   resources :request_appointments, only: :create
   get "request_appointments", to: "request_appointments#activation", as: :activation
 
+  resources :appointments, only: :create
+  get "appointments/new/:code", to: "appointments#new", as: :make_appointment
+  get "appointments/success", to: "appointments#success", as: :success
+
   get "*path", to: "request_appointments#index"
 end
