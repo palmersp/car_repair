@@ -2,9 +2,7 @@
 
 class AppointmentsController < ApplicationController
   def new
-    if Appointment.exists?(code: params.fetch(:code))
-      redirect_to review_path(code: params.fetch(:code))
-    end
+    redirect_to review_path(code: params.fetch(:code)) if Appointment.exists?(code: params.fetch(:code))
     @code = params.fetch(:code)
     @email = RequestAppointment.find_by(code: @code).email
   end

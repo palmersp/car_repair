@@ -9,5 +9,4 @@ class RequestAppointment < ActiveRecord::Base
   def generate_code
     self.code ||= SecureRandom.hex(10)
   end
-
 end

@@ -6,3 +6,12 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
     - 'config/**/*.rb'
+
+Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 50
