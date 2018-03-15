@@ -4,7 +4,7 @@ Make sure Postgres is installed on your OS.
 
 Clone Repository.
 
-Create the user:
+Create the user in Postgres:
 `create role car_repair with createdb login password 'carpass';`
 
 Setup the database:
