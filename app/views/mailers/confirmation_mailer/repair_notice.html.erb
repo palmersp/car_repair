@@ -1,0 +1,19 @@
+<p>A new repair appointment had been scheduled:</p>
+
+<ul>
+  <li>First Name: <%= @appointment.first_name %></li>
+  <li>Last Name: <%= @appointment.last_name %></li>
+  <li>Phone Number: <%= @appointment.phone_number %></li>
+  <li>Email: <%= @email %></li>
+</ul>
+
+<ul>
+  <li>Car Year: <%= @appointment.car_year %></li>
+  <li>Car Make: <%= @appointment.car_make %></li>
+  <li>Car Model: <%= @appointment.car_model %></li>
+</ul>
+
+<p>Repair Required: <%= @appointment.repair_required %></p>
+<p>Appointment Date: <%= @appointment.appointment_date.strftime("%A, %B %e, %Y %l:%M %p") %></p>
+
+<p>IP Address: <%= @ip_address %></p>

@@ -1,36 +1,20 @@
 <%= form_with scope: :appointment, url: appointments_path, local: true do |f| %>
-  <%= f.label :first_name %>
-  <br/>
-  <%= f.text_field :first_name %>
-  <br/>
-  <%= f.label :last_name %>
-  <br/>
-  <%= f.text_field :last_name %>
-  <br/>
-  <%= f.label :phone_number %>
-  <br/>
-  <%= f.text_field :phone_number %>
-  <br/>
-  <%= f.label :car_year %>
-  <br/>
-  <%= f.number_field :car_year %>
-  <br/>
-  <%= f.label :car_make %>
-  <br/>
-  <%= f.text_field :car_make %>
-  <br/>
-  <%= f.label :car_model %>
-  <br/>
-  <%= f.text_field :car_model %>
-  <br/>
-  <%= f.label :repair_required %>
-  <br/>
-  <%= f.text_area :repair_required %>
-  <br/>
-  <%= f.label :appointment_date %>
-  <br/>
-  <%= f.datetime_field :appointment_date %>
-  <br/>
+  <%= f.label :first_name %><br/>
+  <%= f.text_field :first_name %><br/>
+  <%= f.label :last_name %><br/>
+  <%= f.text_field :last_name %><br/>
+  <%= f.label :phone_number %><br/>
+  <%= f.text_field :phone_number %><br/>
+  <%= f.label :car_year %><br/>
+  <%= f.number_field :car_year %><br/>
+  <%= f.label :car_make %><br/>
+  <%= f.text_field :car_make %><br/>
+  <%= f.label :car_model %><br/>
+  <%= f.text_field :car_model %><br/>
+  <%= f.label :repair_required %><br/>
+  <%= f.text_area :repair_required %><br/>
+  <%= f.label :appointment_date %><br/>
+  <%= f.datetime_field :appointment_date %><br/>
   <%= f.hidden_field :code, value: @code %>
   <%= f.hidden_field :email, value: @email %>
   <%= f.submit %>

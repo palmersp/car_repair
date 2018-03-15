@@ -1,0 +1,31 @@
+<h1>Review</h1>
+
+<% if !Review.exists?(appointment_id: @appointment.id) %>
+  <p>Please leave us a review:</p>
+  <%= form_with scope: :review, url: reviews_path, local: true do |f| %>
+    <%= f.hidden_field :appointment_id, value: @appointment.id %>
+    <%= f.label :rating, "Rating on a scale of 1 to 5:"%><br/>
+    <%= f.number_field :rating, min: 1, max: 5 %><br/>
+    <%= f.submit value: "Submit Review" %>
+  <% end %>
+<% else %>
+  <p>Review already submitted. We appreciate your feedback.</p>
+<% end %>
+
+<h2>Appointment Info</h2>
+<ul>
+  <li>First Name: <%= @appointment.first_name %> </li>
+  <li>Last Name: <%= @appointment.last_name %> </li>
+  <li>Phone Number: <%= @appointment.phone_number %> </li>
+  <li>Email: <%= @appointment.email %> </li>
+</ul>
+
+<ul>
+  <li>Car Year: <%= @appointment.car_year %> </li>
+  <li>Car Make: <%= @appointment.car_make %> </li>
+  <li>Car Model: <%= @appointment.car_model %> </li>
+</ul>
+
+<p>Repair Required: <%= @appointment.repair_required %></p>
+
+<p>Appointment Date: <%= @appointment.appointment_date.strftime("%A, %B %e, %Y %l:%M %p") %>

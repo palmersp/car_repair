@@ -1,0 +1,15 @@
+A new repair appointment had been scheduled:
+
+First Name: <%= @appointment.first_name %>
+Last Name: <%= @appointment.last_name %>
+Phone Number: <%= @appointment.phone_number %>
+Email: <%= @email %>
+
+Car Year: <%= @appointment.car_year %>
+Car Make: <%= @appointment.car_make %>
+Car Model: <%= @appointment.car_model %>
+
+Repair Required: <%= @appointment.repair_required %>
+Appointment Date: <%= @appointment.appointment_date.strftime("%A, %B %e, %Y %l:%M %p") %>
+
+IP Address: <%= @ip_address %>

@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Make sure Postgres is installed on your OS.
 
-Things you may want to cover:
+Create the user:
+`create role car_repair with createdb login password 'carpass';`
 
-* Ruby version
+Setup the database:
+`rake db:setup`
 
-* System dependencies
+In terminal run:
+`rails server`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Navigate to **localhost:3000** in your browser.

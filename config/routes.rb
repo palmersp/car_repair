@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   get "appointments/new/:code", to: "appointments#new", as: :make_appointment
   get "appointments/success", to: "appointments#success", as: :success
 
+  resource :reviews, only: :create
+  get "reviews/new/:code", to: "reviews#new", as: :review
+  get "reviews/thanks", to: "reviews#thanks", as: :thanks
   get "*path", to: "request_appointments#index"
 end

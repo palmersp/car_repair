@@ -2,6 +2,9 @@
 
 class AppointmentsController < ApplicationController
   def new
+    if Appointment.exists?(code: params.fetch(:code))
+      redirect_to review_path(code: params.fetch(:code))
+    end
     @code = params.fetch(:code)
     @email = RequestAppointment.find_by(code: @code).email
   end
@@ -19,9 +22,9 @@ class AppointmentsController < ApplicationController
       code: params.dig(:appointment, :code),
       email: params.dig(:appointment, :email)
     )
-
+    ip_address = request.remote_ip
     ConfirmationMailer.send_confirmation(appointment)
-    ConfirmationMailer.repair_notice(appointment)
+    ConfirmationMailer.repair_notice(appointment, ip_address)
     redirect_to success_path
   end
 end
